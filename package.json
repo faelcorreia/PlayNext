@@ -1,0 +1,15 @@
+{
+  "name": "PlayNext",
+  "version": "1.0.0",
+  "description": "Random game to play",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafael Correia and Fillipe Hott",
+  "license": "GPLv3",
+  "dependencies": {
+    "express": "^4.13.1",
+    "request": "^2.58.0"
+  }
+}
