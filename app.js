@@ -3,6 +3,8 @@ var request = require('request');
 var app = express();
 app.use(express.static(__dirname + '/app'))
 
+app.set('port', (process.env.PORT || 5000));
+
 var key = 'B1D8105F367F2C4FE1ACA9C1F64EC504';
 
 app.get('/game/:user', function (req, res) {
@@ -54,7 +56,7 @@ var getGame = function(steamid, res) {
 		})
 }
 
-var server = app.listen(3000, function () {
+var server = app.listen(app.get('port'), function () {
   var host = server.address().address;
   var port = server.address().port;
 });
