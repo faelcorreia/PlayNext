@@ -1,6 +1,10 @@
-var app = angular.module('nextPlay', []);
+var app = angular.module('nextPlay', [])
 
-app.controller('IndexCtrl', function($scope, $http) {
+.config(['$compileProvider', function($compileProvider) {   
+	$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|steam):/);
+}])
+
+.controller('IndexCtrl', function($scope, $http) {
 	$scope.isLoading = false;
 	$scope.isUser = false;
 	$scope.game = {};
